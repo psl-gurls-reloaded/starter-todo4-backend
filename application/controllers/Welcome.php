@@ -5,7 +5,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends Application
 {
 
-	/**
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->model('tasks');
+		$this->data['pagetitle'] = 'PSL-Gurls-Reloaded';
+	}
+        
+        /**
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
